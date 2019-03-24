@@ -27,6 +27,7 @@ mongoose.connect(dbString, function(err) {
   Tx.remove({}, function(err) { 
     Address.remove({}, function(err2) { 
       var s_timer = new Date().getTime();
+      console.log('30 blockhash %s', blockhash);
       db.update_tx_db(settings.coin, 1, COUNT, settings.update_timeout, function(){
         var e_timer = new Date().getTime();
         Tx.count({}, function(txerr, txcount){

@@ -94,6 +94,12 @@ app.use('/ext/getdistribution', function(req,res){
   });
 });
 
+app.use('/ext/getlastblocks/:min', function(req,res){
+    db.get_last_blocks(settings.index.last_blocks, (req.params.min * 100000000), function(blocks){
+        res.send({data: blocks});
+    });
+});
+
 app.use('/ext/getlasttxs/:min', function(req,res){
   db.get_last_txs(settings.index.last_txs, (req.params.min * 100000000), function(txs){
     res.send({data: txs});
