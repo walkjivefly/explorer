@@ -6,21 +6,22 @@
 {
   // name your instance!
   "title": "Crown Testnet Explorer",
-  "address": "127.0.0.1:3001",
+  "address": "92.60.44.60:3001",
   // coin name
   "coin": "Crown Testnet",
   // coin symbol
   "symbol": "tCRW",
   // logo
-  "logo": "/images/logo.png",
+  "logo": "/images/crownlogo-150x150.png",
   // favicon
   "favicon": "public/favicon.ico",
+  "discord_logo": "/images/discord-brands.svg",
   // Uses bootswatch themes (http://bootswatch.com/)
   // Valid options:
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cyborg",
+  "theme": "Darkly",
   // port to listen for requests on.
   "port": 3001,
   // database settings (MongoDB)
@@ -53,6 +54,7 @@
     "twitter": true,
     "facebook": true,
     "googleplus": false,
+    "discord": true,
     "youtube": true,
     "search": true,
     "movement": true,
@@ -105,6 +107,7 @@
   "facebook": "crownplatform",
   "googleplus": "yourgooglepluspage",
   "youtube": "UCCKAgkSSOI-fIqcAEHR1rXw",
+  "discord": "rB3Kr86",
   //genesis
   "genesis_tx": "80ad356118a9ab8db192db66ef77146cc36d958f959251feace550e4ca3d1446",
   "genesis_block": "0000000085370d5e122f64f4ab19c68614ff3df78c8d13cb814fd7e69a1dc6da",
