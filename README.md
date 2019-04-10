@@ -1,20 +1,15 @@
-Iquidus Explorer - 1.6.1
-================
+Crown PoS Explorer - 1.7.0
+==========================
 
-An open source block explorer written in node.js.
+An Iquidus-based block explorer for the Crown PoS chain.
+
+This project is a fork of 
+[Iquidus Explorer](https://github.com/iquidus/explorer) 
+so massive thanks go out to Luke Williams for his code! Thank you!!!
 
 ### See it in action
 
-*  [Deutsche eMark](http://b.emark.tk/)
-*  [Sphere](http://sphere.iquidus.io)
-*  [Vertcoin](http://explorer.vertcoin.info/)
-*  [Vivo](http://vivo.explorerz.top:3003)
-*  [Florincoin](https://florincoin.info/info)
-*  [Maxcoin Explorer 1](https://explorer.maxcoinproject.net/)
-*  [Maxcoin Explorer 2](https://explorer2.maxcoinproject.net/)
-
-
-*note: If you would like your instance mentioned here contact me*
+*  [Crown PoS Explorer](http://http://92.60.44.199:3001/)
 
 ### Requires
 
@@ -108,8 +103,8 @@ Iquidus Explorer is intended to be generic so it can be used with any wallet fol
 
 ### Donate
 
-    BTC: 168hdKA3fkccPtkxnX8hBrsxNubvk4udJi
-    JBS: JZp9893FMmrm1681bDuJBU7c6w11kyEY7D
+    BTC: 3C1VgNZK1M9evqMQaDBUGVCk1EBZU5ND8Q
+    CRW: CRWKcbKuYkT35s4MJMwo8zjTjVe76aCsKUjG
 
 ### Known Issues
 

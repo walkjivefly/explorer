@@ -1,3 +1,8 @@
+1.7.0
+* Updated for Crown PoS consensus blocks
+* Added block indexing and display
+* Update the blurb and version number, remove redundant UPGRADE doc
+
 1.6.1
 * fixed last_txs setting
 * added hashrate_units setting
