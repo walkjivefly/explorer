@@ -26,13 +26,13 @@ block content
           }
         },
         columns: [
-          { data: 'height', width: '8%' },
-          { data: 'block', width: '27%' },
-          { data: 'difficulty', width: '10%' },
+          { data: 'height', width: '10%' },
+          { data: 'block', width: '45%' },
+          //{ data: 'difficulty', width: '10%' },
           { data: 'size', width:'10%' },
           { data: 'txs', width: '10%' },
           //{ data: 'supply', width: '15%' },
-          { data: 'timestamp', width: '20%' },
+          { data: 'timestamp', width: '25%' },
         ]
       });
       var rtable = $('#recent-table').dataTable( {  
@@ -57,8 +57,8 @@ block content
           }
         },
         columns: [
-          { data: 'blockindex', width: '8%' },
-          { data: 'txid', width: '40%' },
+          { data: 'blockindex', width: '10%' },
+          { data: 'txid', width: '45%' },
           { data: 'recipients', width:'5%' },
           { data: 'total', width: '15%' },
           { data: 'timestamp', width: '25%' },
@@ -79,7 +79,7 @@ block content
           tr
             th.text-center #{settings.locale.height}
             th.text-center #{settings.locale.ex_blockhash}
-            th.hidden-xs.text-center #{settings.locale.difficulty}
+            //th.hidden-xs.text-center #{settings.locale.difficulty}
             th.hidden-xs.text-center #{settings.locale.ex_size}
             th.text-center #{settings.locale.transactions}
             //th.text-center #{settings.locale.ex_supply}
