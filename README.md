@@ -9,13 +9,13 @@ so massive thanks go out to Luke Williams for his code! Thank you!!!
 
 ### See it in action
 
-*  [Crown PoS Explorer](http://http://92.60.44.199:3001/)
+*  [Crown PoS Explorer](http://explorer.crown.tech/)
 
 ### Requires
 
 *  node.js >= 0.10.28
-*  mongodb 2.6.x
-*  *coind
+*  mongodb >= 2.6.x
+*  crownd
 
 ### Create database
 
@@ -37,7 +37,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/walkjivefly/explorer explorer
 
 ### Install node modules
 
@@ -95,9 +95,25 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
     */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
     */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
 
+### Install Forever to keep the javascript running
+
+If the terminal window running the explorer closes the explorer stops running.
+You can keep it running using Forever. Install it by
+
+    sudo npm install forever -g
+    sudo npm install forever-monitor
+
+Now, instead of npm start you can
+
+    forever start bin/cluster
+
+If you want to shut it down use
+
+    forever stop bin/cluster
+ 
 ### Wallet
 
-Iquidus Explorer is intended to be generic so it can be used with any wallet following the usual standards. The wallet must be running with atleast the following flags
+The wallet must be running with at least the following flags
 
     -daemon -txindex
 

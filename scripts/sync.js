@@ -10,6 +10,7 @@ var mongoose = require('mongoose')
 
 var mode = 'update';
 var database = 'index';
+var runtime = new Date().toUTCString(); 
 
 // displays usage and exits
 function usage() {
@@ -121,11 +122,11 @@ dbString = dbString + '/' + settings.dbsettings.database;
 
 is_locked(function (exists) {
   if (exists) {
-    console.log("Script already running..");
+    console.log("%s Script already running..", runtime);
     process.exit(0);
   } else {
     create_lock(function (){
-      console.log("script launched with pid: " + process.pid);
+      console.log("%s script launched with pid: %s", runtime, process.pid);
       mongoose.connect(dbString, function(err) {
         if (err) {
           console.log('Unable to connect to database: %s', dbString);
@@ -179,6 +180,7 @@ is_locked(function (exists) {
                       });
                     });
                   } else if (mode == 'update') {
+                    //console.log('Last %s count %s', stats.last, stats.count);
                     db.update_tx_db(settings.coin, stats.last, stats.count, settings.update_timeout, function(){
                       db.update_richlist('received', function(){
                         db.update_richlist('balance', function(){
