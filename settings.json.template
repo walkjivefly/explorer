@@ -7,23 +7,30 @@
   // name your instance!
   "title": "Crown PoS Explorer",
   "address": "127.0.0.1:3001",
+
   // coin name
   "coin": "Crown",
+
   // coin symbol
   "symbol": "CRW",
+
   // logo
   "logo": "/images/crownlogo-150x150.png",
+
   // favicon
   "favicon": "public/favicon.ico",
   "discord_logo": "/images/discord-brands.svg",
+
   // Uses bootswatch themes (http://bootswatch.com/)
   // Valid options:
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
   "theme": "Darkly",
+
   // port to listen for requests on.
   "port": 3001,
+
   // database settings (MongoDB)
   "dbsettings": {
     "user": "iquidus",
@@ -32,25 +39,30 @@
     "address": "localhost",
     "port": 27017
   },
+
   //update script settings
   "update_timeout": 10,
   "check_timeout": 250,
+
   // wallet settings
   "wallet": {
     "host": "localhost",
     "port": 9341,
-    "user": "crownexplorer",
-    "pass": "8uYb9ZJcgKfQ6g1ZKaawPIA7SgrAJ9ZVxCHuSUAvJwsi"
+    "user": "your RPC user here",
+    "pass": "your RPC password here"
   },
+
   // confirmations
-  "confirmations": 6,
+  "confirmations": 60,
+
   // language settings
   "locale": "locale/en.json",
+
   // menu settings
   "display": {
     "api": true,
-    "markets": false,
-    "richlist": false,
+    "markets": true,
+    "richlist": true,
     "twitter": true,
     "facebook": true,
     "googleplus": false,
@@ -60,13 +72,15 @@
     "movement": true,
     "network": true
   },
+
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
     "show_hashrate": true,
     "difficulty": "POW",
     "last_txs": 100,
-    "last_blocks": 5
+    "last_blocks": 10
   },
+
   // ensure links on API page are valid
   "api": {
     "blockindex": 2325612,
@@ -74,6 +88,7 @@
     "txhash": "f27a5fc11e9ab37bdc90a31ee63ee810799b3b26b063be6d8adbb6b3d1d2fbfa",
     "address": "CRWFXfSjYz8y9KJtjLvk8hcwdUVuoFivygSs"
   },
+
   // market settings
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
   //default market is loaded by default and determines last price in header
@@ -87,12 +102,14 @@
     "ccex_key": "Get-Your-Own-Key",
     "default": "bittrex"
   },
+
   // richlist/top100 settings
   "richlist": {
     "distribution": true,
     "received": true,
     "balance": true
   },
+
   // movement page settings
   // min amount: show transactions greater than this value
   // low flag: greater than this value flagged yellow
@@ -102,21 +119,27 @@
     "low_flag": 500,
     "high_flag": 10000
   },
+
   // twitter, facebook, googleplus, youtube
   "twitter": "crownplatform",
   "facebook": "crownplatform",
   "googleplus": "yourgooglepluspage",
   "youtube": "UCCKAgkSSOI-fIqcAEHR1rXw",
   "discord": "rB3Kr86",
+
   //genesis
   "genesis_tx": "80ad356118a9ab8db192db66ef77146cc36d958f959251feace550e4ca3d1446",
   "genesis_block": "0000000085370d5e122f64f4ab19c68614ff3df78c8d13cb814fd7e69a1dc6da",
+
   //heavy (enable/disable additional heavy features)
   "heavy": false,
+
   //amount of txs to index per address (stores latest n txs)
   "txcount": 100,
+
   //show total sent & received on address page (set false if PoS)
   "show_sent_received": true,
+
   // how to calculate current coin supply
   // COINBASE : total sent from coinbase (PoW)
   // GETINFO : retreive from getinfo api call (PoS)
@@ -124,23 +147,56 @@
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
   "supply": "BALANCES",
+
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
   // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
   "nethash": "getnetworkhashps",
+
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
-  "nethash_units": "G",
+  "nethash_units": "M",
+
   // Address labels
-  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // example : "CRWhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
   // label (required) = test to display
   // type (optional) = class of label, valid types: default, primary, warning, danger, success
   // url (optional) = url to link to for more information
   "labels": {
-    //  "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
-    //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
-  "CRWFXfSjYz8y9KJtjLvk8hcwdUVuoFivygSs": {"label": "A masternode"},
-  "CRWQxrNqdipkAkbkai7PJgKA8expifv3NvA4": {"label": "A systemnode"}
-
+  "CRWXpkrLQP9a4ye182qGtfAzVeGdtenhTsdD": {"label": "Bittrex"},
+  "CRWGx2ygzo7yeHGybHoPJd7xtUWXNxHPpMJ3": {"label": "Bittrex"},
+  "CRWRR4BRw7rYjLSpDmycds5fZDtYKqSfvKFW": {"label": "Bittrex"},
+  "CRWZJcLCHCP85NAX5RddA4mmDnKfZHCyeiD9": {"label": "Bittrex"},
+  "CRWGhdLPo6ezfnJCDw5zywGL1JLaFZtbAT2j": {"label": "Bittrex"},
+  "CRWYkz7yLF4AeVP6riyYDPrTtoJggrrctjiF": {"label": "Bittrex"},
+  "CRWZLSw5EB6SpBa72TGVgQSHPoLrVUreAKKA": {"label": "Bittrex"},
+  "CRWKUnEtkbxh7t8gVmFoMudgb3W5gWDGUJPq": {"label": "Bittrex"},
+  "CRWT4db3hhKHxVF9WpqsoNwUcEytxQ4nmWB5": {"label": "Bittrex"},
+  "CRWU3Br5ASErovxEWUtQF5bJvrugEmsz4G7U": {"label": "Bittrex"},
+  "CRWNpSfVEuDLabWM2unYjdywf9YdKBp3rMRm": {"label": "Bittrex"},
+  "CRWS4UtaWq8cfAQTrRUGaXaRSpLVTezzF7x4": {"label": "Bittrex"},
+  "CRWMBFTGXCUtc4mpRrmQCFxmMtBBg9C2vAZn": {"label": "Bittrex"},
+  "CRWFu38UimcEV4sdvqzagpic77LLdV3q1938": {"label": "Bittrex"},
+  "CRWLP2GHmDE7PcP1vt8mKMb63Nni6tmByAvi": {"label": "Bittrex"},
+  "CRWa1BGSzTXb5fXkNvTUNXvaS7StFYCA4LKu": {"label": "Bittrex"},
+  "CRWRYNPVxsYcaYgFWb8x5jydAKEP6p2DnKnn": {"label": "Bittrex"},
+  "CRWQj57SFVnKgjoMy6ixkdSaoq9hgBhFGzzX": {"label": "Bittrex"},
+  "CRWNgURDZHL3uvfdtc9TFeHwAMDNszniF96z": {"label": "Bittrex"},
+  "CRWGyVQd3e2tdmEj9y5XPnkunNyK5yswvBUT": {"label": "Bittrex"},
+  "CRWYQbUYuqhK41pM1vFYHcktkAzrpvvRbBcP": {"label": "Bittrex"},
+  "CRWUeCe15Wa73tdCRbK7ZGcBFzEbESRvvNca": {"label": "Bittrex"},
+  "CRWPNVTLiap3NcKkiHQFXT1RNtCn66nK6UCn": {"label": "Bittrex"},
+  "CRWYFzwdxbpzci3SMNWcP86mTbHhgeE3ogN5": {"label": "Bittrex"},
+  "CRWLuU8G4WRk41AxmcUAX9fT3XY31VdWVptx": {"label": "Bittrex"},
+  "CRWTnuPdQfhLDfhV9ddgGetLpgUuK7LKJwpp": {"label": "Bittrex"},
+  "CRWL5q9C4VVHVwtEupNw41UAvAPXnDtqwwP3": {"label": "Bittrex"},
+  "CRWExN46j6Q1dPfPheXpn4C3TAYugvn4seC7": {"label": "Bittrex"},
+  "CRWQG87Ri6yjvvLMbibUnxz5QHk9yozQS9HN": {"label": "Bittrex"},
+  "CRWXLSDm8TyAfMmdrCKXGMYbshvT9nAFzaCp": {"label": "Bittrex"},
+  "CRWGMDfRGmhdao7zCDeeFzjvAf55xpHp49kN": {"label": "Bittrex"},
+  "CRWRwbtUfKgVn84MJ3M2zTD1CsqYY46ynzxc": {"label": "Bittrex"},
+  "CRWNKLWU3MT7MPJ9ZSrPSJkfaddCHtbRWixb": {"label": "Bittrex"},
+  "CRWL1tiEPJq3XPoi3J3TBLz5tLshyGYKigZH": {"label": "Bittrex"},
+  "CRWRKBUUNZcQSx7W31M6zjFwyTZJ737cjKBN": {"label": "Bittrex"}
   }
 }
