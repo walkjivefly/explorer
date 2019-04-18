@@ -89,7 +89,7 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
 
 **crontab**
 
-*Example crontab; update index every minute and market data every 2 minutes*
+Example crontab; update index every minute, market data every 2 minutes and peers every 5 minutes.
 
     */1 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
     */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
@@ -117,16 +117,15 @@ The wallet must be running with at least the following flags
 
     -daemon -txindex
 
-### Donate
-
-    BTC: 3C1VgNZK1M9evqMQaDBUGVCk1EBZU5ND8Q
-    CRW: CRWKcbKuYkT35s4MJMwo8zjTjVe76aCsKUjG
-
 ### Known Issues
 
 **script is already running.**
 
-If you receive this message when launching the sync script either a) a sync is currently in progress, or b) a previous sync was killed before it completed. If you are certian a sync is not in progress remove the index.pid from the tmp folder in the explorer root directory.
+If you receive this message when launching the sync script then either: 
+* a sync is currently in progress, or 
+* a previous sync was killed before it completed. 
+
+If you are certain a sync is not in progress, remove the index.pid from the tmp folder in the explorer root directory.
 
     rm tmp/index.pid
 
@@ -147,6 +146,11 @@ To run sync.js with a larger stack size launch with
 Where [SIZE] is an integer higher than the default.
 
 *note: SIZE will depend on which blockchain you are using, you may need to play around a bit to find an optimal setting*
+
+### Donate
+
+    BTC: 3C1VgNZK1M9evqMQaDBUGVCk1EBZU5ND8Q
+    CRW: CRWKcbKuYkT35s4MJMwo8zjTjVe76aCsKUjG
 
 ### License
 
