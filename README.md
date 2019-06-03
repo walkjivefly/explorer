@@ -9,7 +9,7 @@ so massive thanks go out to Luke Williams for his code! Thank you!!!
 
 ### See it in action
 
-*  [Crown PoS Explorer](http://explorer.crown.tech/)
+*  [Crown PoS Explorer](https://iquidus-01.crown.tech/)
 
 ### Requires
 
