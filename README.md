@@ -13,9 +13,16 @@ so massive thanks go out to Luke Williams for his code! Thank you!!!
 
 ### Requires
 
-*  node.js >= 0.10.28
-*  mongodb >= 2.6.x
 *  crownd
+*  git
+*  mongodb >= 2.6.x
+*  node.js >= 0.10.28
+
+### Wallet
+
+The wallet must be running with at least the following flags
+
+    -daemon -txindex
 
 ### Create database
 
@@ -23,7 +30,7 @@ Enter MongoDB cli:
 
     $ mongo
 
-Create databse:
+Create database:
 
     > use explorerdb
 
@@ -111,12 +118,6 @@ If you want to shut it down use
 
     forever stop bin/cluster
  
-### Wallet
-
-The wallet must be running with at least the following flags
-
-    -daemon -txindex
-
 ### Known Issues
 
 **script is already running.**
