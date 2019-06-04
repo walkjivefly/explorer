@@ -15,7 +15,7 @@
   "symbol": "CRW",
 
   // logo
-  "logo": "/images/crownlogo-150x150.png",
+  "logo": "/images/logo.png",
 
   // favicon
   "favicon": "public/favicon.ico",
