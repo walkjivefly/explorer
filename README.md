@@ -10,13 +10,23 @@ so massive thanks go out to Luke Williams for his code! Thank you!!!
 ### See it in action
 
 *  [Crown PoS Explorer](https://iquidus-01.crown.tech/)
+*  [defunctex Explorer](https://defunctex.com/)
 
 ### Requires
 
 *  crownd
+*  curl
+*  gcc
+*  g++
 *  git
+*  make
 *  mongodb >= 2.6.x
 *  node.js >= 0.10.28
+
+I assume if you're installing a Crown explorer that you already have crownd
+installed. Unless you're installing on a new machine there's a fair chance 
+you already have some of the others installed too. Instructions for installing
+everything except Crown are available in PREREQS.md
 
 ### Wallet
 
@@ -36,7 +46,8 @@ Create database:
 
 Create user with read/write access:
 
-    > db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
+    > db.createUser( { user: "username", pwd: "password", roles: [ "readWrite" ] } )
+    > exit
 
 *note: If you're using mongo shell 2.4.x, use the following to create your user:
 
@@ -55,6 +66,16 @@ Create user with read/write access:
     cp ./settings.json.template ./settings.json
 
 *Make required changes in settings.json*
+
+### Open explorer port in the firewall
+
+By default the explorer run on port 3001. If you're using ufw you can open
+this port by
+
+    sudo ufw allow 3001
+
+If you use some other firewall then refer to its documentation for the 
+correct way to open the port.
 
 ### Start Explorer
 
