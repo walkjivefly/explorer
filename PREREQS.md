@@ -51,4 +51,5 @@ What you need to do is
 
 
 You now have all the pre-requisites needed to complete the explorer
-installation, as described in READE.md.
+installation, as described in 
+[README.md](https://github.com/walkjivefly/explorer/blob/master/README.md).

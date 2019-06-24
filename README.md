@@ -26,7 +26,8 @@ so massive thanks go out to Luke Williams for his code! Thank you!!!
 I assume if you're installing a Crown explorer that you already have crownd
 installed. Unless you're installing on a new machine there's a fair chance 
 you already have some of the others installed too. Instructions for installing
-everything except Crown are available in PREREQS.md
+everything except Crown are available in 
+[PREREQS.md](https://github.com/walkjivefly/explorer/blob/master/PREREQS.md)
 
 ### Wallet
 
