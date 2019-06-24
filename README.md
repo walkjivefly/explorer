@@ -70,7 +70,7 @@ Create user with read/write access:
 
 ### Open explorer port in the firewall
 
-By default the explorer run on port 3001. If you're using ufw you can open
+By default the explorer runs on port 3001. If you're using ufw you can open
 this port by
 
     sudo ufw allow 3001
